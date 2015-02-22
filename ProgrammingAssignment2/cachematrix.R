@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## Write a short comment describing this function
+## This function creates a matrix which
+## can cache the inverse of the matrix
+## This permits get and set matrix as well as
+## set inverse and get inverse
+## This function also uses the super assignment operator.
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -18,7 +20,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The following function finds the inverse of the 
+## "matrix" returned by `makeCacheMatrix`. If the inverse has
+## already been calculated and the matrix is not changed, then
+## this function will pick the inverse from the cache.
+
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
@@ -32,4 +38,3 @@ cacheSolve <- function(x, ...) {
   x$setinv(inv)
   inv
 }
-
